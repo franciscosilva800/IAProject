@@ -2,7 +2,6 @@ package catchBox;
 
 import agentSearch.Action;
 import agentSearch.State;
-import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
 import java.awt.*;
 import java.util.ArrayList;
@@ -15,7 +14,7 @@ public class CatchState extends State implements Cloneable {
 
     public CatchState(int[][] matrix) {
         //TODO
-        throw new NotImplementedException();
+        throw new UnsupportedOperationException("Not implemented at");
     }
 
     public void executeAction(Action action) {
@@ -23,57 +22,57 @@ public class CatchState extends State implements Cloneable {
         // TODO
         fireUpdatedEnvironment();
 
-        throw new NotImplementedException(); // delete after implementing
+        throw new UnsupportedOperationException("Not implemented at"); // delete after implementing
     }
 
     public boolean canMoveUp() {
         //TODO
-        throw new NotImplementedException();
+        throw new UnsupportedOperationException("Not implemented at");
     }
 
     public boolean canMoveRight() {
         //TODO
-        throw new NotImplementedException();
+        throw new UnsupportedOperationException("Not implemented at");
     }
 
     public boolean canMoveDown() {
         //TODO
-        throw new NotImplementedException();
+        throw new UnsupportedOperationException("Not implemented at");
     }
 
     public boolean canMoveLeft() {
         //TODO
-        throw new NotImplementedException();
+        throw new UnsupportedOperationException("Not implemented at");
     }
 
     public void moveUp() {
         //TODO
-        throw new NotImplementedException();
+        throw new UnsupportedOperationException("Not implemented at");
     }
 
     public void moveRight() {
         //TODO
-        throw new NotImplementedException();
+        throw new UnsupportedOperationException("Not implemented at");
     }
 
     public void moveDown() {
         //TODO
-        throw new NotImplementedException();
+        throw new UnsupportedOperationException("Not implemented at");
     }
 
     public void moveLeft() {
         //TODO
-        throw new NotImplementedException();
+        throw new UnsupportedOperationException("Not implemented at");
     }
 
     public int getNumBox() {
         //TODO
-        throw new NotImplementedException();
+        throw new UnsupportedOperationException("Not implemented at");
     }
 
     public void setCellCatch(int line, int column) {
         //TODO
-        throw new NotImplementedException();
+        throw new UnsupportedOperationException("Not implemented at");
     }
 
     public int[][] getMatrix() {
@@ -82,12 +81,12 @@ public class CatchState extends State implements Cloneable {
 
     public void setGoal(int line, int column) {
         //TODO
-        throw new NotImplementedException();
+        throw new UnsupportedOperationException("Not implemented at");
     }
 
     public int getSteps() {
         //TODO
-        throw new NotImplementedException();
+        throw new UnsupportedOperationException("Not implemented at");
     }
 
     public int getSize() {
@@ -145,7 +144,7 @@ public class CatchState extends State implements Cloneable {
     @Override
     public CatchState clone() {
         //TODO
-        throw new NotImplementedException();
+        throw new UnsupportedOperationException("Not implemented at");
     }
 
     //Listeners

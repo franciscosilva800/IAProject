@@ -1,7 +1,6 @@
 package catchBox;
 
 import ga.IntVectorIndividual;
-import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
 public class CatchIndividual extends IntVectorIndividual<CatchProblemForGA, CatchIndividual> {
 
@@ -16,7 +15,7 @@ public class CatchIndividual extends IntVectorIndividual<CatchProblemForGA, Catc
     @Override
     public double computeFitness() {
         //TODO
-        throw new NotImplementedException();
+        throw new UnsupportedOperationException("Not implemented at");
     }
 
     public int[] getGenome() {
