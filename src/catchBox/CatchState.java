@@ -41,7 +41,10 @@ public class CatchState extends State implements Cloneable {
         action.execute(this);
         fireUpdatedEnvironment();
 
-        throw new UnsupportedOperationException("Not implemented at"); // delete after implementing
+
+
+
+
     }
 
     public boolean canMoveUp() {

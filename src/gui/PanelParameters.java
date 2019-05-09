@@ -126,9 +126,9 @@ public class PanelParameters extends PanelAtributesValue {
         double mutationProbability = Double.parseDouble(textFieldProbMutation.getText());
         switch (comboBoxMutationMethods.getSelectedIndex()) {
             case 0:
-                return new Mutation3<>(mutationProbability);
-            case 1:
                 return new MutationInsert<>(mutationProbability);
+            case 1:
+                return new Mutation3<>(mutationProbability);
             case 2:
                 return new Mutation2<>(mutationProbability);
         }
