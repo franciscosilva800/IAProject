@@ -21,7 +21,5 @@ public class CatchProblemSearch<S extends CatchState> extends Problem<S> {
     }
 
     public boolean isGoal(S state) {
-        //TODO
-        throw new UnsupportedOperationException("Not implemented at");
     }
 }

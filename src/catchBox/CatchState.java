@@ -11,68 +11,109 @@ public class CatchState extends State implements Cloneable {
     //TODO this class might require the definition of additional methods and/or attributes
 
     protected int[][] matrix;
+    private int line;
+    private int column;
+    private int numBox;
+    private Cell goalPosition;
+    private int nrSteps;
 
     public CatchState(int[][] matrix) {
-        //TODO
-        throw new UnsupportedOperationException("Not implemented at");
+        this.matrix = new int[matrix.length][matrix.length];
+        numBox = 0;
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix.length; j++) {
+                this.matrix[i][j] = matrix[i][j];
+                if(this.matrix[i][j] == 1) {
+                    line= i;
+                    column = j;
+                }
+                if(this.matrix[i][j] == 2){
+                    numBox++;
+                }
+            }
+        }
+        nrSteps = 0;
+
+
     }
 
     public void executeAction(Action action) {
         action.execute(this);
-        // TODO
         fireUpdatedEnvironment();
 
         throw new UnsupportedOperationException("Not implemented at"); // delete after implementing
     }
 
     public boolean canMoveUp() {
-        //TODO
-        throw new UnsupportedOperationException("Not implemented at");
+        if(line != 0 && (matrix[line+1][column] == 0 || matrix[line+1][column] ==2 )){
+            return true;
+        }
+
+        return false;
     }
 
     public boolean canMoveRight() {
-        //TODO
-        throw new UnsupportedOperationException("Not implemented at");
+        if(column != matrix[0].length && (matrix[line][column+1] == 0 || matrix[line][column+1] ==2 )){
+            return true;
+        }
+
+        return false;
     }
 
     public boolean canMoveDown() {
-        //TODO
-        throw new UnsupportedOperationException("Not implemented at");
+        if(line != matrix.length && (matrix[line-1][column] == 0 || matrix[line-1][column] ==2 )){
+            return true;
+        }
+
+        return false;
     }
 
     public boolean canMoveLeft() {
-        //TODO
-        throw new UnsupportedOperationException("Not implemented at");
+        if(column != 0 && (matrix[line][column-1] == 0 || matrix[line][column-1] ==2 )){
+            return true;
+        }
+
+        return false;
     }
 
     public void moveUp() {
-        //TODO
-        throw new UnsupportedOperationException("Not implemented at");
+        if(canMoveUp()){
+            setCellCatch(line + 1,column);
+        }
     }
 
     public void moveRight() {
-        //TODO
-        throw new UnsupportedOperationException("Not implemented at");
+        if(canMoveRight(){
+            setCellCatch(line,column+1);
+        }
     }
 
     public void moveDown() {
-        //TODO
-        throw new UnsupportedOperationException("Not implemented at");
+        if(canMoveDown(){
+            setCellCatch(line-1,column);
+        }
     }
 
     public void moveLeft() {
-        //TODO
-        throw new UnsupportedOperationException("Not implemented at");
+        if(canMoveLeft(){
+            setCellCatch(line,column -1);
+        }
     }
 
     public int getNumBox() {
-        //TODO
-        throw new UnsupportedOperationException("Not implemented at");
+        return this.numBox;
     }
 
-    public void setCellCatch(int line, int column) {
-        //TODO
-        throw new UnsupportedOperationException("Not implemented at");
+    public void setCellCatch(int line1, int column1) {
+        //LIMPA A CELULA
+        matrix[this.line][this.column] = 0;
+
+        //METE O AGENTE NA CELULA
+        matrix[line1][column1] = 1;
+
+        nrSteps++;
+
+
     }
 
     public int[][] getMatrix() {
@@ -80,13 +121,15 @@ public class CatchState extends State implements Cloneable {
     }
 
     public void setGoal(int line, int column) {
-        //TODO
-        throw new UnsupportedOperationException("Not implemented at");
+        goalPosition = new Cell(line,column);
+    }
+
+    public Cell getGoal(){
+        return goalPosition;
     }
 
     public int getSteps() {
-        //TODO
-        throw new UnsupportedOperationException("Not implemented at");
+        return nrSteps;
     }
 
     public int getSize() {
