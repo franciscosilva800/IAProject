@@ -83,19 +83,19 @@ public class CatchState extends State implements Cloneable {
     }
 
     public void moveRight() {
-        if(canMoveRight(){
+        if(canMoveRight()){
             setCellCatch(line,column+1);
         }
     }
 
     public void moveDown() {
-        if(canMoveDown(){
+        if(canMoveDown()){
             setCellCatch(line-1,column);
         }
     }
 
     public void moveLeft() {
-        if(canMoveLeft(){
+        if(canMoveLeft()){
             setCellCatch(line,column -1);
         }
     }

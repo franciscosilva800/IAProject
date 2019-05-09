@@ -7,8 +7,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ac04bfec-7f60-42eb-9fae-b904b9702de2" name="Default" comment="&quot;Modifiquei quase nada&quot;">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProjCatch/catchBox/CatchState.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/catchBox/CatchProblemSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/catchBox/CatchProblemSearch.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/catchBox/CatchState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/catchBox/CatchState.java" afterDir="false" />
     </list>
@@ -36,11 +34,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/catchBox/CatchState.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
-              <caret line="131" column="23" selection-start-line="131" selection-start-column="23" selection-end-line="131" selection-end-column="23" />
+            <state relative-caret-position="231">
+              <caret line="97" column="25" selection-start-line="97" selection-start-column="25" selection-end-line="97" selection-end-column="25" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#2262#2263#0" expanded="true" />
@@ -56,11 +54,15 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/catchBox/CatchProblemSearch.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="22" column="36" selection-start-line="22" selection-start-column="36" selection-end-line="22" selection-end-column="36" />
+            <state relative-caret-position="315">
+              <caret line="23" column="20" selection-start-line="23" selection-start-column="20" selection-end-line="23" selection-end-column="20" />
+              <folding>
+                <element signature="e#626#627#0" expanded="true" />
+                <element signature="e#644#645#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -236,8 +238,8 @@
         <option value="$PROJECT_DIR$/src/ga/IntVectorIndividual.java" />
         <option value="$PROJECT_DIR$/src/agentSearch/ReactiveAgent.java" />
         <option value="$PROJECT_DIR$/src/search/AStarSearch.java" />
-        <option value="$PROJECT_DIR$/src/catchBox/CatchProblemSearch.java" />
         <option value="$PROJECT_DIR$/src/catchBox/CatchState.java" />
+        <option value="$PROJECT_DIR$/src/catchBox/CatchProblemSearch.java" />
       </list>
     </option>
   </component>
@@ -501,7 +503,7 @@
       <workItem from="1556548412576" duration="1279000" />
       <workItem from="1556798654432" duration="2599000" />
       <workItem from="1557396252675" duration="571000" />
-      <workItem from="1557397265338" duration="7358000" />
+      <workItem from="1557397265338" duration="7526000" />
     </task>
     <task id="LOCAL-00001" summary="&quot;Modifiquei quase nada&quot;">
       <created>1556548524566</created>
@@ -514,7 +516,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14530000" />
+    <option name="totallyTimeSpent" value="14698000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -529,7 +531,7 @@
     <frame x="1440" y="27" width="1920" height="1053" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21077909" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21077909" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Nl-Palette" order="3" />
@@ -547,7 +549,7 @@
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Messages" order="10" visible="true" weight="0.040348966" />
+      <window_info active="true" anchor="bottom" id="Messages" order="10" visible="true" weight="0.32388222" />
       <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
@@ -944,13 +946,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/catchBox/CatchProblemSearch.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="22" column="36" selection-start-line="22" selection-start-column="36" selection-end-line="22" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/catchBox/Cell.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -960,8 +955,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/catchBox/CatchState.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="131" column="23" selection-start-line="131" selection-start-column="23" selection-end-line="131" selection-end-column="23" />
+        <state relative-caret-position="231">
+          <caret line="97" column="25" selection-start-line="97" selection-start-column="25" selection-end-line="97" selection-end-column="25" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#2262#2263#0" expanded="true" />
@@ -972,6 +967,17 @@
             <element signature="e#2772#2773#0" expanded="true" />
             <element signature="e#2993#2994#0" expanded="true" />
             <element signature="e#3019#3020#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/catchBox/CatchProblemSearch.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="23" column="20" selection-start-line="23" selection-start-column="20" selection-end-line="23" selection-end-column="20" />
+          <folding>
+            <element signature="e#626#627#0" expanded="true" />
+            <element signature="e#644#645#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -21,5 +21,6 @@ public class CatchProblemSearch<S extends CatchState> extends Problem<S> {
     }
 
     public boolean isGoal(S state) {
+        return true;
     }
 }
