@@ -1,26 +1,50 @@
 package catchBox;
 
+import agentSearch.Action;
 import agentSearch.Problem;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class CatchProblemSearch<S extends CatchState> extends Problem<S> {
     //TODO this class might require the definition of additional methods and/or attributes
-    private Cell goalPosition;
+
+    private final CatchState goalState;
+    private ArrayList<Action> actions;
+
+
     public CatchProblemSearch(S initialCatchState, Cell goalPosition) {
         super(initialCatchState);
-        this.goalPosition = goalPosition;
-        //TODO
-        throw new UnsupportedOperationException("Not implemented at");
+        initialCatchState.setGoal(goalPosition.getLine(),goalPosition.getColumn());
+        this.goalState = new CatchState(new int[2][2]);
+        actions = new ArrayList<>(4);
+        actions.add(new ActionUp());
+        actions.add(new ActionRight());
+        actions.add(new ActionDown());
+        actions.add(new ActionLeft());
+
+
     }
 
     @Override
     public List<S> executeActions(S state) {
-        //TODO
-        throw new UnsupportedOperationException("Not implemented at");
+        ArrayList<S> sucessors = new ArrayList<>(4);
+        S sucessor;
+        for (Action action : actions) {
+            if(action.isValid(state)){
+                sucessor = (S) state.clone();
+                action.execute(sucessor);
+                sucessors.add(sucessor);
+
+            }
+        }
+
+        /*DEVOLVER LISTA DE ESTADOS SUCESSORES*/
+        return sucessors;
     }
 
     public boolean isGoal(S state) {
-        return goalPosition.equals(state.getGoal());
+        return goalState.equals(state);
+
     }
 }
