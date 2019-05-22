@@ -9,8 +9,9 @@ public abstract class IntVectorIndividual<P extends Problem, I extends IntVector
         super(problem);
         genome = new int[size];
 
-        //TODO
-        throw new UnsupportedOperationException("Not implemtend yet!");
+
+
+
       }
 
     public IntVectorIndividual(IntVectorIndividual<P, I> original) {

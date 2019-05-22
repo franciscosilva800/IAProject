@@ -6,13 +6,11 @@ public class HeuristicCatch extends Heuristic<CatchProblemSearch, CatchState> {
 
     @Override
     public double compute(CatchState state) {
-        //TODO
-        throw new UnsupportedOperationException("Not implemented at");
+        return state.computeDistance(state.getLine(),state.getColumn(),state.getGoal());
     }
 
     @Override
     public String toString() {
-        //TODO
-        throw new UnsupportedOperationException("Not implemented at");
+        return "Heuristic: Compute Distance Between Two Points";
     }
 }

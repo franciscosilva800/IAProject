@@ -11,6 +11,7 @@ public class CatchProblemSearch<S extends CatchState> extends Problem<S> {
 
     //private final CatchState goalState;
     private ArrayList<Action> actions;
+    private CatchState goalState;
 
     public CatchProblemSearch(S initialCatchState, Cell goalPosition) {
         super(initialCatchState);
@@ -43,7 +44,6 @@ public class CatchProblemSearch<S extends CatchState> extends Problem<S> {
     }
 
     public boolean isGoal(S state) {
-        //return goalState.equals(state);
-        return true;
+        return goalState.equals(state);
     }
 }

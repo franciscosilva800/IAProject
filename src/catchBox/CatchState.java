@@ -17,6 +17,18 @@ public class CatchState extends State implements Cloneable {
     private Cell goalPosition;
     private int nrSteps;
 
+    public int getLine() {
+        return line;
+    }
+
+    public int getColumn() {
+        return column;
+    }
+
+    public Cell getGoalPosition() {
+        return goalPosition;
+    }
+
     public CatchState(int[][] matrix) {
         this.matrix = new int[matrix.length][matrix.length];
         numBox = 0;
@@ -41,10 +53,13 @@ public class CatchState extends State implements Cloneable {
         action.execute(this);
         fireUpdatedEnvironment();
 
+    }
 
+    public int computeDistance(int line, int column, Cell goalCell){
+        int x = Math.abs(line - goalCell.getLine());
+        int y = Math.abs(column - goalCell.getColumn());
 
-
-
+        return (x*y);
     }
 
     public boolean canMoveUp() {
