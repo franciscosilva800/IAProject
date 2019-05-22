@@ -9,9 +9,9 @@ public abstract class IntVectorIndividual<P extends Problem, I extends IntVector
         super(problem);
         genome = new int[size];
 
-
-
-
+        for (int i = 0; i < genome.length; i++) {
+            genome[i] = GeneticAlgorithm.random.nextInt();
+        }
       }
 
     public IntVectorIndividual(IntVectorIndividual<P, I> original) {

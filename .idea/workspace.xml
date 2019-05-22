@@ -8,15 +8,7 @@
   <component name="ChangeListManager">
     <list default="true" id="ac04bfec-7f60-42eb-9fae-b904b9702de2" name="Default" comment="&quot;Modifiquei quase nada&quot;">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProjCatch/catchBox/CatchProblemForGA.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjCatch/catchBox/CatchProblemForGA.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProjCatch/catchBox/CatchProblemSearch.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjCatch/catchBox/CatchProblemSearch.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProjCatch/catchBox/CatchState.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjCatch/catchBox/CatchState.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProjCatch/catchBox/HeuristicCatch.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjCatch/catchBox/HeuristicCatch.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProjCatch/ga/IntVectorIndividual.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjCatch/ga/IntVectorIndividual.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/catchBox/CatchProblemForGA.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/catchBox/CatchProblemForGA.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/catchBox/CatchProblemSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/catchBox/CatchProblemSearch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/catchBox/CatchState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/catchBox/CatchState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/catchBox/HeuristicCatch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/catchBox/HeuristicCatch.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ga/IntVectorIndividual.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ga/IntVectorIndividual.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -35,24 +27,6 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/catchBox/Pair.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/gui/MainFrame.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3780">
-              <caret line="273" column="84" selection-start-line="273" selection-start-column="84" selection-end-line="273" selection-end-column="84" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/catchBox/CatchExperimentsFactory.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="585">
@@ -64,8 +38,32 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ga/IntVectorIndividual.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" selection-start-line="11" selection-end-line="11" />
+            <state relative-caret-position="30">
+              <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/catchBox/CatchProblemSearch.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="480">
+              <caret line="32" column="39" lean-forward="true" selection-start-line="32" selection-start-column="39" selection-end-line="32" selection-end-column="39" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/catchBox/CatchProblemForGA.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="21" column="7" selection-start-line="21" selection-end-line="22" />
+              <folding>
+                <element signature="e#627#628#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -83,10 +81,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/catchBox/CatchState.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
+            <state relative-caret-position="915">
               <caret line="61" column="21" selection-start-line="61" selection-start-column="21" selection-end-line="61" selection-end-column="21" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -242,11 +240,11 @@
         <option value="$PROJECT_DIR$/src/agentSearch/ReactiveAgent.java" />
         <option value="$PROJECT_DIR$/src/search/AStarSearch.java" />
         <option value="$PROJECT_DIR$/src/gui/PanelParameters.java" />
-        <option value="$PROJECT_DIR$/src/catchBox/CatchProblemSearch.java" />
         <option value="$PROJECT_DIR$/src/catchBox/CatchState.java" />
         <option value="$PROJECT_DIR$/src/catchBox/HeuristicCatch.java" />
         <option value="$PROJECT_DIR$/src/catchBox/CatchProblemForGA.java" />
         <option value="$PROJECT_DIR$/src/ga/IntVectorIndividual.java" />
+        <option value="$PROJECT_DIR$/src/catchBox/CatchProblemSearch.java" />
       </list>
     </option>
   </component>
@@ -261,54 +259,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="PackagesPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="ProjCatch" type="58d84e3e:PackageViewProjectNode" />
-              <item name="ProjCatch" type="616d4139:PackageViewModuleNode" />
-            </path>
-            <path>
-              <item name="ProjCatch" type="58d84e3e:PackageViewProjectNode" />
-              <item name="ProjCatch" type="616d4139:PackageViewModuleNode" />
-              <item name="agentSearch" type="1f31426a:PackageElementNode" />
-            </path>
-            <path>
-              <item name="ProjCatch" type="58d84e3e:PackageViewProjectNode" />
-              <item name="ProjCatch" type="616d4139:PackageViewModuleNode" />
-              <item name="catchBox" type="1f31426a:PackageElementNode" />
-            </path>
-            <path>
-              <item name="ProjCatch" type="58d84e3e:PackageViewProjectNode" />
-              <item name="ProjCatch" type="616d4139:PackageViewModuleNode" />
-              <item name="ga" type="1f31426a:PackageElementNode" />
-            </path>
-            <path>
-              <item name="ProjCatch" type="58d84e3e:PackageViewProjectNode" />
-              <item name="ProjCatch" type="616d4139:PackageViewModuleNode" />
-              <item name="gui" type="1f31426a:PackageElementNode" />
-            </path>
-            <path>
-              <item name="ProjCatch" type="58d84e3e:PackageViewProjectNode" />
-              <item name="ProjCatch" type="616d4139:PackageViewModuleNode" />
-              <item name="gui" type="1f31426a:PackageElementNode" />
-              <item name="MainFrame.java" type="529ef68f:ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
-            </path>
-            <path>
-              <item name="ProjCatch" type="58d84e3e:PackageViewProjectNode" />
-              <item name="ProjCatch" type="616d4139:PackageViewModuleNode" />
-              <item name="gui" type="1f31426a:PackageElementNode" />
-              <item name="PanelParameters.java" type="529ef68f:ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
-            </path>
-            <path>
-              <item name="ProjCatch" type="58d84e3e:PackageViewProjectNode" />
-              <item name="ProjCatch" type="616d4139:PackageViewModuleNode" />
-              <item name="search" type="1f31426a:PackageElementNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -406,6 +356,54 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="ProjCatch" type="58d84e3e:PackageViewProjectNode" />
+              <item name="ProjCatch" type="616d4139:PackageViewModuleNode" />
+            </path>
+            <path>
+              <item name="ProjCatch" type="58d84e3e:PackageViewProjectNode" />
+              <item name="ProjCatch" type="616d4139:PackageViewModuleNode" />
+              <item name="agentSearch" type="1f31426a:PackageElementNode" />
+            </path>
+            <path>
+              <item name="ProjCatch" type="58d84e3e:PackageViewProjectNode" />
+              <item name="ProjCatch" type="616d4139:PackageViewModuleNode" />
+              <item name="catchBox" type="1f31426a:PackageElementNode" />
+            </path>
+            <path>
+              <item name="ProjCatch" type="58d84e3e:PackageViewProjectNode" />
+              <item name="ProjCatch" type="616d4139:PackageViewModuleNode" />
+              <item name="ga" type="1f31426a:PackageElementNode" />
+            </path>
+            <path>
+              <item name="ProjCatch" type="58d84e3e:PackageViewProjectNode" />
+              <item name="ProjCatch" type="616d4139:PackageViewModuleNode" />
+              <item name="gui" type="1f31426a:PackageElementNode" />
+            </path>
+            <path>
+              <item name="ProjCatch" type="58d84e3e:PackageViewProjectNode" />
+              <item name="ProjCatch" type="616d4139:PackageViewModuleNode" />
+              <item name="gui" type="1f31426a:PackageElementNode" />
+              <item name="MainFrame.java" type="529ef68f:ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
+            </path>
+            <path>
+              <item name="ProjCatch" type="58d84e3e:PackageViewProjectNode" />
+              <item name="ProjCatch" type="616d4139:PackageViewModuleNode" />
+              <item name="gui" type="1f31426a:PackageElementNode" />
+              <item name="PanelParameters.java" type="529ef68f:ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
+            </path>
+            <path>
+              <item name="ProjCatch" type="58d84e3e:PackageViewProjectNode" />
+              <item name="ProjCatch" type="616d4139:PackageViewModuleNode" />
+              <item name="search" type="1f31426a:PackageElementNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -417,6 +415,7 @@
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15527344" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -538,6 +537,8 @@
       <workItem from="1558375792569" duration="40000" />
       <workItem from="1558438828370" duration="19000" />
       <workItem from="1558459901182" duration="7000" />
+      <workItem from="1558522604219" duration="1199000" />
+      <workItem from="1558530720550" duration="671000" />
     </task>
     <task id="LOCAL-00001" summary="&quot;Modifiquei quase nada&quot;">
       <created>1556548524566</created>
@@ -550,7 +551,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22055000" />
+    <option name="totallyTimeSpent" value="23925000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -563,8 +564,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1920" height="1053" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22465315" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22998933" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Nl-Palette" order="3" />
@@ -915,31 +917,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/catchBox/CatchProblemSearch.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
-          <folding>
-            <element signature="e#1298#1299#0" expanded="true" />
-            <element signature="e#1343#1344#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/catchBox/Cell.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="17" column="38" selection-start-line="17" selection-start-column="38" selection-end-line="17" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/catchBox/CatchProblemForGA.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="21" column="7" selection-start-line="21" selection-end-line="22" />
-          <folding>
-            <element signature="e#627#628#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -961,13 +942,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="585">
           <caret line="54" column="28" selection-start-line="54" selection-start-column="28" selection-end-line="54" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ga/IntVectorIndividual.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
         </state>
       </provider>
     </entry>
@@ -1012,7 +986,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/catchBox/CatchState.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
+        <state relative-caret-position="915">
           <caret line="61" column="21" selection-start-line="61" selection-start-column="21" selection-end-line="61" selection-end-column="21" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1022,6 +996,33 @@
             <element signature="e#567#568#0" expanded="true" />
             <element signature="e#604#605#0" expanded="true" />
             <element signature="e#639#640#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/catchBox/CatchProblemForGA.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="21" column="7" selection-start-line="21" selection-end-line="22" />
+          <folding>
+            <element signature="e#627#628#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ga/IntVectorIndividual.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/catchBox/CatchProblemSearch.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="32" column="39" lean-forward="true" selection-start-line="32" selection-start-column="39" selection-end-line="32" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

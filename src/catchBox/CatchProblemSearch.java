@@ -9,14 +9,14 @@ import java.util.List;
 public class CatchProblemSearch<S extends CatchState> extends Problem<S> {
     //TODO this class might require the definition of additional methods and/or attributes
 
-    //private final CatchState goalState;
+    private final CatchState goalState;
     private ArrayList<Action> actions;
-    private CatchState goalState;
+
 
     public CatchProblemSearch(S initialCatchState, Cell goalPosition) {
         super(initialCatchState);
         initialCatchState.setGoal(goalPosition.getLine(),goalPosition.getColumn());
-        //this.goalState = new CatchState(new)
+        this.goalState = new CatchState(new int[2][2]);
         actions = new ArrayList<>(4);
         actions.add(new ActionUp());
         actions.add(new ActionRight());
@@ -45,5 +45,7 @@ public class CatchProblemSearch<S extends CatchState> extends Problem<S> {
 
     public boolean isGoal(S state) {
         return goalState.equals(state);
+
     }
 }
+
