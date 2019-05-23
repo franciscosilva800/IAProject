@@ -8,25 +8,21 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 public class CatchState extends State implements Cloneable {
-    //TODO this class might require the definition of additional methods and/or attributes
 
     protected int[][] matrix;
-    private int line;
-    private int column;
+    private int lineCatch;
+    private int columnCatch;
     private int numBox;
-    private Cell goalPosition;
+    private int lineGoal;
+    private int columnGoal;
     private int nrSteps;
 
-    public int getLine() {
-        return line;
+    public int getLineCatch() {
+        return lineCatch;
     }
 
-    public int getColumn() {
-        return column;
-    }
-
-    public Cell getGoalPosition() {
-        return goalPosition;
+    public int getColumnCatch() {
+        return columnCatch;
     }
 
     public CatchState(int[][] matrix) {
@@ -35,17 +31,16 @@ public class CatchState extends State implements Cloneable {
         for (int i = 0; i < matrix.length; i++) {
             for (int j = 0; j < matrix.length; j++) {
                 this.matrix[i][j] = matrix[i][j];
-                if(this.matrix[i][j] == 1) {
-                    line= i;
-                    column = j;
+                if(this.matrix[i][j] == Properties.CATCH) {
+                    lineCatch = i;
+                    columnCatch = j;
                 }
-                if(this.matrix[i][j] == 2){
+                if(this.matrix[i][j] == Properties.BOX){
                     numBox++;
                 }
             }
         }
         nrSteps = 0;
-
 
     }
 
@@ -55,66 +50,64 @@ public class CatchState extends State implements Cloneable {
 
     }
 
-    public int computeDistance(int line, int column, Cell goalCell){
-        int x = Math.abs(line - goalCell.getLine());
-        int y = Math.abs(column - goalCell.getColumn());
+    public int computeDistance(Cell goalCell){
 
-        return (x*y);
+        return Math.abs(goalCell.getLine() - lineCatch) + Math.abs(goalCell.getColumn() - columnCatch);
     }
 
     public boolean canMoveUp() {
-        if(line != 0 && (matrix[line+1][column] == 0 || matrix[line+1][column] ==2 )){
-            return true;
+        if(lineCatch == 0 || matrix[lineCatch-1][columnCatch] == Properties.WALL){
+            return false;
         }
 
-        return false;
+        return true;
     }
 
     public boolean canMoveRight() {
-        if(column != matrix[0].length && (matrix[line][column+1] == 0 || matrix[line][column+1] ==2 )){
-            return true;
+        if(columnCatch == matrix[lineCatch].length-1 || matrix[lineCatch][columnCatch +1] == Properties.WALL){
+            return false;
         }
 
-        return false;
+        return true;
     }
 
     public boolean canMoveDown() {
-        if(line != matrix.length && (matrix[line-1][column] == 0 || matrix[line-1][column] ==2 )){
-            return true;
+        if(lineCatch == matrix.length-1  || matrix[lineCatch+1][columnCatch] ==Properties.WALL ){
+            return false;
         }
 
-        return false;
+        return true;
     }
 
     public boolean canMoveLeft() {
-        if(column != 0 && (matrix[line][column-1] == 0 || matrix[line][column-1] ==2 )){
-            return true;
+        if(columnCatch == 0  || matrix[lineCatch][columnCatch-1] == Properties.WALL){
+            return false;
         }
 
-        return false;
+        return true;
     }
 
     public void moveUp() {
         if(canMoveUp()){
-            setCellCatch(line + 1,column);
+            setCellCatch(lineCatch -1, columnCatch);
         }
     }
 
     public void moveRight() {
         if(canMoveRight()){
-            setCellCatch(line,column+1);
+            setCellCatch(lineCatch, columnCatch +1);
         }
     }
 
     public void moveDown() {
         if(canMoveDown()){
-            setCellCatch(line-1,column);
+            setCellCatch(lineCatch +1, columnCatch);
         }
     }
 
     public void moveLeft() {
         if(canMoveLeft()){
-            setCellCatch(line,column -1);
+            setCellCatch(lineCatch, columnCatch -1);
         }
     }
 
@@ -124,10 +117,12 @@ public class CatchState extends State implements Cloneable {
 
     public void setCellCatch(int line1, int column1) {
         //LIMPA A CELULA
-        matrix[this.line][this.column] = 0;
+        matrix[this.lineCatch][this.columnCatch] = Properties.EMPTY;
 
         //METE O AGENTE NA CELULA
-        matrix[line1][column1] = 1;
+        matrix[line1][column1] = Properties.CATCH;
+        lineCatch = line1;
+        columnCatch = column1;
 
         nrSteps++;
 
@@ -139,11 +134,8 @@ public class CatchState extends State implements Cloneable {
     }
 
     public void setGoal(int line, int column) {
-        goalPosition = new Cell(line,column);
-    }
-
-    public Cell getGoal(){
-        return goalPosition;
+        this.lineGoal = line;
+        this.columnGoal = column;
     }
 
     public int getSteps() {
@@ -204,8 +196,7 @@ public class CatchState extends State implements Cloneable {
 
     @Override
     public CatchState clone() {
-        //TODO
-        throw new UnsupportedOperationException("Not implemented at");
+        return new CatchState(this.matrix);
     }
 
     //Listeners

@@ -20,7 +20,7 @@ public class CatchProblemForGA implements Problem<CatchIndividual> {
     @Override
     public CatchIndividual getNewIndividual() {
         return new CatchIndividual(this,size);
-    };
+    }
 
     @Override
     public String toString() {
