@@ -134,7 +134,7 @@ public class PanelSimulation extends JPanel implements EnvironmentListener {
 
         g = environmentPanel.getGraphics();
         g.drawImage(image, GRID_TO_PANEL_GAP, GRID_TO_PANEL_GAP, null);
-        panelInformation.getTextFieldBox().setText(Integer.toString(mainFrame.getAgentSearch().getInitialBox().size()-environment.getNumBox()));
+        panelInformation.getTextFieldBox().setText(Integer.toString(mainFrame.getAgentSearch().getInitialBox().size()-environment.getNumBoxes()));
         panelInformation.getTextFieldSteps().setText(Integer.toString(environment.getSteps()));
 
         try {

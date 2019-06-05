@@ -1,17 +1,33 @@
 package ga;
 
-public abstract class IntVectorIndividual<P extends Problem, I extends IntVectorIndividual> extends Individual<P, I> {
-    //TODO this class might require the definition of additional methods and/or attributes
+import catchBox.Cell;
+import catchBox.Pair;
 
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Random;
+
+public abstract class IntVectorIndividual<P extends Problem, I extends IntVectorIndividual> extends Individual<P, I> {
     protected int[] genome;
+    private Random random;
 
     public IntVectorIndividual(P problem, int size) {
         super(problem);
         genome = new int[size];
+        LinkedList<Integer> visitados = new LinkedList<>();
 
-        for (int i = 0; i < genome.length; i++) {
-            genome[i] = GeneticAlgorithm.random.nextInt();
+        for (int i = 0; i < size; i++) {
+            int r = GeneticAlgorithm.random.nextInt(size)+1;
+
+            while (visitados.size() > 0 && visitados.contains(r)) {
+                r=GeneticAlgorithm.random.nextInt(size)+1;
+
+            }
+            visitados.add(r);
+            genome[i] = r;
         }
+
       }
 
     public IntVectorIndividual(IntVectorIndividual<P, I> original) {

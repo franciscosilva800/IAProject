@@ -14,7 +14,6 @@ public class RecombinationPartialMapped<I extends IntVectorIndividual, P extends
 
     private int cut1;
     private int cut2;
-
     @Override
     public void recombine(I ind1, I ind2) {
         child1 = new int[ind1.getNumGenes()];

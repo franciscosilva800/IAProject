@@ -2,7 +2,11 @@ package catchBox;
 
 import ga.IntVectorIndividual;
 
+import java.util.ArrayList;
+import java.util.LinkedList;
+
 public class CatchIndividual extends IntVectorIndividual<CatchProblemForGA, CatchIndividual> {
+    private double fitness;
 
     public CatchIndividual(CatchProblemForGA problem, int size) {
         super(problem, size);
@@ -14,9 +18,30 @@ public class CatchIndividual extends IntVectorIndividual<CatchProblemForGA, Catc
 
     @Override
     public double computeFitness() {
-        //TODO
-        throw new UnsupportedOperationException("Not implemented at");
+        fitness = 0;
+        LinkedList<Cell> boxes = problem.getCellBoxes();
+        Cell agent = problem.getCellCatch();
+        Cell door = problem.getDoor();
+
+
+        //DISTANCIA DO AGENTE Á PRIMEIRA CAIXA
+        fitness = problem.getDistanceBetweenCells(agent,boxes.get(genome[0]-1));
+
+
+        //DISTANCIA DAS CAIXAS ENTRE SI
+        for (int i = 1; i < genome.length-1 ; i++) {
+            fitness += problem.getDistanceBetweenCells(boxes.get(genome[i]-1),boxes.get(genome[i+1]-1));
+        }
+
+
+        //DISTANCIA DA ULTIMA CAIXA A PORTA
+        //So entra no ultimo valor
+        fitness += problem.getDistanceBetweenCells(boxes.get(genome[genome.length-1]-1),door);
+
+
+        return fitness;
     }
+
 
     public int[] getGenome() {
         return genome;

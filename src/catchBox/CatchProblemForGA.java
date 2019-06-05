@@ -15,6 +15,16 @@ public class CatchProblemForGA implements Problem<CatchIndividual> {
         this.pairs = pairs;
         this.cellCatch = cellCatch;
         this.door = door;
+        this.size = cellBoxes.size();
+    }
+
+    public int getDistanceBetweenCells(Cell origin, Cell destiny) {
+        for (Pair pair : pairs) {
+            if ((pair.getCell1().equals(origin) && pair.getCell2().equals(destiny))||(pair.getCell1().equals(destiny) && pair.getCell2().equals(origin))){
+                return pair.getValue();
+            }
+        }
+        return 0;
     }
 
     @Override
@@ -22,9 +32,28 @@ public class CatchProblemForGA implements Problem<CatchIndividual> {
         return new CatchIndividual(this,size);
     }
 
+    public int getNrCellBoxes() {
+        return cellBoxes.size();
+    }
+
+    public Cell getCellCatch() {
+        return cellCatch;
+    }
+
+    public Cell getDoor() {
+        return door;
+    }
+
+    public LinkedList<Pair> getPairs() {
+        return pairs;
+    }
+
+    public LinkedList<Cell> getCellBoxes(){
+        return this.cellBoxes;
+    }
+
     @Override
     public String toString() {
-        //TODO
-        throw new UnsupportedOperationException("Not implemented at");
+        return "CatchProblemForGA";
     }
 }

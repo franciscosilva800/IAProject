@@ -9,13 +9,16 @@ import java.util.Arrays;
 
 public class CatchState extends State implements Cloneable {
 
+    private int lineDoor;
+    private int columnDoor;
     protected int[][] matrix;
     private int lineCatch;
     private int columnCatch;
-    private int numBox;
+    private int numBoxes;
     private int lineGoal;
     private int columnGoal;
     private int nrSteps;
+    private int boxesCatched;
 
     public int getLineCatch() {
         return lineCatch;
@@ -27,7 +30,7 @@ public class CatchState extends State implements Cloneable {
 
     public CatchState(int[][] matrix) {
         this.matrix = new int[matrix.length][matrix.length];
-        numBox = 0;
+        numBoxes = 0;
         for (int i = 0; i < matrix.length; i++) {
             for (int j = 0; j < matrix.length; j++) {
                 this.matrix[i][j] = matrix[i][j];
@@ -36,11 +39,16 @@ public class CatchState extends State implements Cloneable {
                     columnCatch = j;
                 }
                 if(this.matrix[i][j] == Properties.BOX){
-                    numBox++;
+                    numBoxes++;
+                }
+                if(this.matrix[i][j] == Properties.DOOR){
+                    lineDoor = i;
+                    columnDoor = j;
                 }
             }
         }
         nrSteps = 0;
+        boxesCatched = 0;
 
     }
 
@@ -72,7 +80,7 @@ public class CatchState extends State implements Cloneable {
     }
 
     public boolean canMoveDown() {
-        if(lineCatch == matrix.length-1  || matrix[lineCatch+1][columnCatch] ==Properties.WALL ){
+        if(lineCatch == matrix.length-1  || matrix[lineCatch+1][columnCatch] ==Properties.WALL){
             return false;
         }
 
@@ -111,18 +119,28 @@ public class CatchState extends State implements Cloneable {
         }
     }
 
-    public int getNumBox() {
-        return this.numBox;
+    public int getNumBoxes() {
+        return this.numBoxes;
     }
 
     public void setCellCatch(int line1, int column1) {
-        //LIMPA A CELULA
-        matrix[this.lineCatch][this.columnCatch] = Properties.EMPTY;
+
+
+        if(lineCatch == lineDoor && columnCatch == columnDoor)
+            matrix[this.lineCatch][this.columnCatch] = Properties.DOOR;
+        else
+            matrix[this.lineCatch][this.columnCatch] = Properties.EMPTY;
+
 
         //METE O AGENTE NA CELULA
         matrix[line1][column1] = Properties.CATCH;
+
+
+
         lineCatch = line1;
         columnCatch = column1;
+
+
 
         nrSteps++;
 
