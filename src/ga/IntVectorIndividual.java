@@ -49,6 +49,7 @@ public abstract class IntVectorIndividual<P extends Problem, I extends IntVector
         return -1;
     }
 
+
     public int getGene(int index) {
         return genome[index];
     }

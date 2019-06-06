@@ -125,25 +125,15 @@ public class CatchState extends State implements Cloneable {
 
     public void setCellCatch(int line1, int column1) {
 
-
-        if(lineCatch == lineDoor && columnCatch == columnDoor)
-            matrix[this.lineCatch][this.columnCatch] = Properties.DOOR;
-        else
-            matrix[this.lineCatch][this.columnCatch] = Properties.EMPTY;
-
+        matrix[this.lineCatch][this.columnCatch] = Properties.EMPTY;
 
         //METE O AGENTE NA CELULA
         matrix[line1][column1] = Properties.CATCH;
 
-
-
         lineCatch = line1;
         columnCatch = column1;
 
-
-
         nrSteps++;
-
 
     }
 
@@ -170,11 +160,11 @@ public class CatchState extends State implements Cloneable {
                 return Properties.COLORBOX;
             case Properties.CATCH:
                 return Properties.COLORCATCH;
-            case Properties.DOOR:
-                return Properties.COLORDOOR;
             case Properties.WALL:
                 return Properties.COLORWALL;
             default:
+                if(line== lineDoor && column == columnDoor)
+                    return Properties.COLORDOOR;
                 return Properties.COLOREMPTY;
         }
     }
