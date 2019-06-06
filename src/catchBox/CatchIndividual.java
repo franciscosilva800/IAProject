@@ -6,7 +6,6 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 
 public class CatchIndividual extends IntVectorIndividual<CatchProblemForGA, CatchIndividual> {
-    private double fitness;
 
     public CatchIndividual(CatchProblemForGA problem, int size) {
         super(problem, size);
