@@ -12,7 +12,7 @@ Tournament size: 4
 
 //--------------------------------
 
-Recombination: pmx
+Recombination: pmx,cycle,order1
 
 Recombination probability: 0.7, 0.8
 
