@@ -49,13 +49,13 @@ public class CatchExperimentsFactory extends ExperimentsFactory {
         //RECOMBINATION
         double recombinationProbability = Double.parseDouble(getParameterValue("Recombination probability"));
         switch (getParameterValue("Recombination")) {
-            case "PMX":
+            case "pmx":
                 recombination = new RecombinationPartialMapped<>(recombinationProbability);
                 break;
-            case "CYCLE":
+            case "cycle":
                 recombination = new RecombinationCycle<>(recombinationProbability);
                 break;
-            case "ORDER1":
+            case "order1":
                 recombination = new RecombinationOrder1<>(recombinationProbability);
                 break;
         }
