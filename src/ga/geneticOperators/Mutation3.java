@@ -3,6 +3,8 @@ package ga.geneticOperators;
 import ga.IntVectorIndividual;
 import ga.Problem;
 
+import static ga.GeneticAlgorithm.random;
+
 public class Mutation3<I extends IntVectorIndividual, P extends Problem<I>> extends Mutation<I, P> {
 
     public Mutation3(double probability) {
@@ -10,14 +12,30 @@ public class Mutation3<I extends IntVectorIndividual, P extends Problem<I>> exte
     }
 
     @Override
-    public void mutate(I ind) {
+    public void mutate(I individual) {
         //TODO
-        throw new UnsupportedOperationException("Not implemented at");
+        int numGenes = individual.getNumGenes();
+
+        for (int i = 0; i < numGenes; i++) {
+            int newValue = random.nextInt();
+
+            for (int j = 0; j < numGenes; j++) {
+                if (individual.getGene(j) == newValue){
+                    newValue = random.nextInt();
+                }
+            }
+            if (getProbability() > random.nextDouble()){
+
+
+                individual.setGene(i, newValue);
+            }
+        }
+
     }
 
     @Override
     public String toString() {
         //TODO
-        throw new UnsupportedOperationException("Not implemented at");
+        return "Mutation 2";
     }
 }
