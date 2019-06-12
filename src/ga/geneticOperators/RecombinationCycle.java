@@ -33,6 +33,8 @@ public class RecombinationCycle<I extends IntVectorIndividual, P extends Problem
             p1.setGene(indices.get(i),p2.getGene(indices.get(i)));
             p2.setGene(indices.get(i),aux);
         }
+
+        indices.clear();
     }
 
 

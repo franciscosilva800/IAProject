@@ -15,12 +15,17 @@ public class RecombinationOrder1<I extends IntVectorIndividual, P extends Proble
 
     private int child1[],child2[], position1, position2;
     private LinkedList<Integer> visited;
+
     @Override
     public void recombine(I ind1, I ind2) {
         child1 = new int[ind1.getNumGenes()];
         child2 = new int[ind2.getNumGenes()];
-        position1 = GeneticAlgorithm.random.nextInt(ind1.getNumGenes());
-        position2 = GeneticAlgorithm.random.nextInt(ind1.getNumGenes());
+        position1 = position2 = 0;
+
+        while(position1 == position2) {
+            position1 = GeneticAlgorithm.random.nextInt(ind1.getNumGenes());
+            position2 = GeneticAlgorithm.random.nextInt(ind1.getNumGenes());
+        }
         visited = new LinkedList<>();
 
         if (position1 > position2) {
@@ -40,34 +45,44 @@ public class RecombinationOrder1<I extends IntVectorIndividual, P extends Proble
     }
 
     public void createSegment(I ind1,I ind2,int[] child){
-        for(int i=position1;i<position2;i++){
+        for(int i=position1+1;i<=position2;i++){
             child[i] = ind1.getGene(i);
             visited.add(ind1.getGene(i));
         }
     }
 
     public void reorder(I ind1,I ind2,int[] child,boolean isImpar){
-        int i = position2+1,j=position2+1;
-        while(visited.size() != ind1.getNumGenes() || j<ind1.getNumGenes()){
-            if(i >= ind1.getNumGenes()-1){
-                i = 0;
+        int fatherPos = position2+1,childPos=position2+1,count = position2-position1;
+
+        while(count < child.length){
+
+            if(fatherPos > ind1.getNumGenes()-1){
+                fatherPos = 0;
             }
+
+            if(childPos > child.length-1){
+                childPos = 0;
+            }
+
             if(isImpar){
-                if(!visited.contains(ind2.getGene(i))){
-                    child[j] = ind2.getGene(i);
-                    i++;
+                if(!visited.contains(ind2.getGene(fatherPos))){
+                    child[childPos] = ind2.getGene(fatherPos);
+                    visited.add(ind2.getGene(fatherPos));
+                    childPos++;
+                    count++;
                 }
-                j++;
             }else{
-                if(!visited.contains(ind1.getGene(i))){
-                    child[j] = ind1.getGene(i);
-                    i++;
+                if(!visited.contains(ind1.getGene(fatherPos))){
+                    child[childPos] = ind1.getGene(fatherPos);
+                    visited.add(ind1.getGene(fatherPos));
+                    childPos++;
+                    count++;
                 }
-                j++;
             }
+            fatherPos++;
 
 
-            i++;
+
         }
         visited.clear();
     }
