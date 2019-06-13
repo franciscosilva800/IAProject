@@ -19,10 +19,10 @@ import static ga.GeneticAlgorithm.random;
 *
 * */
 
-public class Mutation2<I extends IntVectorIndividual, P extends Problem<I>> extends Mutation<I, P> {
+public class MutationPartialInversion<I extends IntVectorIndividual, P extends Problem<I>> extends Mutation<I, P> {
 
 
-    public Mutation2(double probability) {
+    public MutationPartialInversion(double probability) {
         super(probability);
     }
 

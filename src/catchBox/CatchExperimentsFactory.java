@@ -67,10 +67,10 @@ public class CatchExperimentsFactory extends ExperimentsFactory {
                 mutation = new MutationInsert<>(mutationProbability);
                 break;
             case "TODO1": //TODO
-                mutation = new Mutation3<>(mutationProbability);
+                mutation = new MutationSwitchAndShift<>(mutationProbability);
                 break;
             case "TODO2": //TODO
-                mutation = new Mutation2<>(mutationProbability);
+                mutation = new MutationPartialInversion<>(mutationProbability);
                 break;
         }
 

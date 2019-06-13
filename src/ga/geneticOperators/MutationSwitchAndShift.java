@@ -5,9 +5,9 @@ import ga.Problem;
 
 import static ga.GeneticAlgorithm.random;
 
-public class Mutation3<I extends IntVectorIndividual, P extends Problem<I>> extends Mutation<I, P> {
+public class MutationSwitchAndShift<I extends IntVectorIndividual, P extends Problem<I>> extends Mutation<I, P> {
 
-    public Mutation3(double probability) {
+    public MutationSwitchAndShift(double probability) {
         super(probability);
     }
 
