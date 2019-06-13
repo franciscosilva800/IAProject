@@ -5,6 +5,10 @@ import ga.Problem;
 
 import static ga.GeneticAlgorithm.random;
 
+/*
+* Seleciona um numero de genes e troca as posicoes entre eles. o ultimo passa para o primeiro e assim andiante
+* */
+
 public class Mutation2<I extends IntVectorIndividual, P extends Problem<I>> extends Mutation<I, P> {
 
 
