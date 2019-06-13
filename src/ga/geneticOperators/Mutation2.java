@@ -16,21 +16,40 @@ public class Mutation2<I extends IntVectorIndividual, P extends Problem<I>> exte
     public void mutate(I individual) {
         //TODO
         int numGenes = individual.getNumGenes();
-        int pos1 = numGenes / 3, pos2 = pos1 - numGenes;
+        int val = 2, geneAux;
+        int[] posParaTrocar = new int[numGenes / val];
 
-        for (int i = 0; i < numGenes; i++) {
 
-            if (i+3 >= numGenes){
-                int gene = individual.getGene(i);
+        int randomStart = random.nextInt();
+        if (randomStart < 0){
+            randomStart = -randomStart;
+        }
+        if (randomStart > numGenes)
+            randomStart = randomStart - numGenes;
 
-                individual.setGene(i, individual.getGene(i+3));
-                individual.setGene(i+3, gene);
 
+        int end = randomStart + posParaTrocar.length;
+
+
+        for (int i = 0; i < posParaTrocar.length; i++) {
+            posParaTrocar[i] = randomStart;
+            randomStart++;
+
+            if (end >= numGenes) {
+                randomStart = 0;
             }
-
         }
 
+        int j = posParaTrocar.length - 1;
+        for (int i = 0; i < posParaTrocar.length / 2; i++) {
+            geneAux = individual.getGene(posParaTrocar[j]);
 
+            individual.setGene(j, individual.getGene(posParaTrocar[i]));
+
+            individual.setGene(i, geneAux);
+
+            j--;
+        }
     }
 
     @Override
