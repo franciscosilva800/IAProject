@@ -2,29 +2,35 @@ package catchBox;
 
 import ga.Problem;
 
+import java.util.Hashtable;
 import java.util.LinkedList;
 
 public class CatchProblemForGA implements Problem<CatchIndividual> {
     private LinkedList<Cell> cellBoxes;
-    private LinkedList<Pair> pairs;
+   // private LinkedList<Pair> pairs;
+    private Hashtable<String,Integer> pairs;
     private Cell cellCatch, door;
     private int size;
+    private String key;
 
-    public CatchProblemForGA(LinkedList<Cell> cellBoxes, LinkedList<Pair> pairs, Cell cellCatch, Cell door) {
+    public CatchProblemForGA(LinkedList<Cell> cellBoxes, LinkedList<Pair> pairsList, Cell cellCatch, Cell door) {
+        String key = null;
         this.cellBoxes = cellBoxes;
-        this.pairs = pairs;
+        this.pairs = new Hashtable<>();
+
+        /*PASSA A LINKEDLIST PARA A HASTABLE*/
+        for (Pair pair : pairsList) {
+            key = pair.getCell1().toString() + '#' + pair.getCell2().toString();
+            pairs.put(key,pair.getValue());
+        }
+
         this.cellCatch = cellCatch;
         this.door = door;
         this.size = cellBoxes.size();
     }
 
     public int getDistanceBetweenCells(Cell origin, Cell destiny) {
-        for (Pair pair : pairs) {
-            if ((pair.getCell1().equals(origin) && pair.getCell2().equals(destiny))||(pair.getCell1().equals(destiny) && pair.getCell2().equals(origin))){
-                return pair.getValue();
-            }
-        }
-        return 0;
+        return pairs.get(origin.toString() + '#' + destiny.toString()) != null ? pairs.get(origin.toString() + '#' + destiny.toString()) : pairs.get(destiny.toString()+ '#' + origin.toString());
     }
 
     @Override
@@ -44,7 +50,7 @@ public class CatchProblemForGA implements Problem<CatchIndividual> {
         return door;
     }
 
-    public LinkedList<Pair> getPairs() {
+    public Hashtable<String, Integer> getPairs() {
         return pairs;
     }
 
