@@ -61,7 +61,6 @@ public class MutationSwitchAndShift<I extends IntVectorIndividual, P extends Pro
 
     @Override
     public String toString() {
-        //TODO
         return "Mutation 2";
     }
 }

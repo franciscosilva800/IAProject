@@ -68,7 +68,6 @@ public class MutationPartialInversion<I extends IntVectorIndividual, P extends P
 
     @Override
     public String toString() {
-        //TODO
         return "Mutation 1";
     }
 }
