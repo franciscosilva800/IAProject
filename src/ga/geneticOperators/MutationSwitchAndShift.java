@@ -25,26 +25,13 @@ public class MutationSwitchAndShift<I extends IntVectorIndividual, P extends Pro
     * */
     @Override
     public void mutate(I individual) {
-        //TODO
-        int numGenes = individual.getNumGenes();
 
-        int random1 = random.nextInt();
-        int random2 = random.nextInt();
+        int numGenes = individual.getNumGenes(),random1, random2;
 
-        if (random1 < 0) {
-            random1 = -random1;
-        } else if (random1 > numGenes) {
-            random1 = random1 - numGenes;
-        } else {
-            random1 = numGenes - 1;
-        }
-        if (random2 > numGenes) {
-            random2 = random2 - numGenes;
-        } else if (random2 < 0) {
-            random2 = -random2;
-        } else {
-            random2 = numGenes - 1;
-        }
+        do{
+            random1 = random.nextInt(numGenes);
+            random2 = random.nextInt(numGenes);
+        }while(random1 == random2);
 
 
         int minVal = (random1 < random2) ? random1 : random2;
@@ -55,12 +42,13 @@ public class MutationSwitchAndShift<I extends IntVectorIndividual, P extends Pro
         for (int i = maxVal; i > minVal + 1; i--) {
             individual.setGene(i, individual.getGene(i-1));
         }
+        
 
-        individual.setGene(minVal + 1, geneAux);
+        individual.setGene(minVal+1, geneAux);
     }
 
     @Override
     public String toString() {
-        return "Mutation 2";
+        return "Switch And Shift";
     }
 }

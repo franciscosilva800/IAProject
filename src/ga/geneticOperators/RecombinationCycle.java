@@ -7,11 +7,11 @@ import java.util.LinkedList;
 
 public class RecombinationCycle<I extends IntVectorIndividual, P extends Problem<I>> extends Recombination<I, P> {
 
-    private LinkedList<Integer> indices;
+    private LinkedList<Integer> indexes;
 
     public RecombinationCycle(double probability) {
         super(probability);
-        indices = new LinkedList<>();
+        indexes = new LinkedList<>();
     }
 
     @Override
@@ -21,20 +21,20 @@ public class RecombinationCycle<I extends IntVectorIndividual, P extends Problem
         /*CRIAS OS CICLOS*/
         do{
 
-            indices.add(idx);
+            indexes.add(idx);
             item = p2.getGene(idx);
             idx = p1.getIndexof(item);
 
-        }while(!indices.contains(idx));
+        }while(!indexes.contains(idx));
 
         /*SUBSTITUI OS VALORES*/
-        for(int i = 0; i < indices.size(); i++){
-            aux = p1.getGene(indices.get(i));
-            p1.setGene(indices.get(i),p2.getGene(indices.get(i)));
-            p2.setGene(indices.get(i),aux);
+        for(int i = 0; i < indexes.size(); i++){
+            aux = p1.getGene(indexes.get(i));
+            p1.setGene(indexes.get(i),p2.getGene(indexes.get(i)));
+            p2.setGene(indexes.get(i),aux);
         }
 
-        indices.clear();
+        indexes.clear();
     }
 
 

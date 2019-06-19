@@ -28,46 +28,31 @@ public class MutationPartialInversion<I extends IntVectorIndividual, P extends P
 
     @Override
     public void mutate(I individual) {
-        //TODO
+
         int numGenes = individual.getNumGenes();
-        int val = 2, geneAux;
-        int[] posParaTrocar = new int[numGenes / val];
+        int  random1,random2,j=0;
+        I ind2 =(I) individual.clone();
+
+        do{
+            random1 = random.nextInt(numGenes);
+            random2 = random.nextInt(numGenes);
+        }while(random1 == random2);
 
 
-        int randomStart = random.nextInt();
-        if (randomStart < 0){
-            randomStart = -randomStart;
-        }
-        if (randomStart > numGenes)
-            randomStart = randomStart - numGenes;
+        int minVal = j = (random1 < random2) ? random1 : random2;
+        int maxVal = (random1 > random2) ? random1 : random2;
 
 
-        int end = randomStart + posParaTrocar.length;
-
-
-        for (int i = 0; i < posParaTrocar.length; i++) {
-            posParaTrocar[i] = randomStart;
-            randomStart++;
-
-            if (end >= numGenes) {
-                randomStart = 0;
-            }
+        for(int i = maxVal; i >= minVal; i--){
+            individual.setGene(j,ind2.getGene(i));
+            j++;
         }
 
-        int j = posParaTrocar.length - 1;
-        for (int i = 0; i < posParaTrocar.length / 2; i++) {
-            geneAux = individual.getGene(posParaTrocar[j]);
 
-            individual.setGene(j, individual.getGene(posParaTrocar[i]));
-
-            individual.setGene(i, geneAux);
-
-            j--;
-        }
     }
 
     @Override
     public String toString() {
-        return "Mutation 1";
+        return "Partial Inversion";
     }
 }

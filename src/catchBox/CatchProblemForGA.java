@@ -7,11 +7,9 @@ import java.util.LinkedList;
 
 public class CatchProblemForGA implements Problem<CatchIndividual> {
     private LinkedList<Cell> cellBoxes;
-   // private LinkedList<Pair> pairs;
     private Hashtable<String,Integer> pairs;
     private Cell cellCatch, door;
     private int size;
-    private String key;
 
     public CatchProblemForGA(LinkedList<Cell> cellBoxes, LinkedList<Pair> pairsList, Cell cellCatch, Cell door) {
         String key = null;

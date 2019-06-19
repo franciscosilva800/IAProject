@@ -1,30 +1,26 @@
 package ga;
 
-import catchBox.Cell;
-import catchBox.Pair;
 
-import java.util.ArrayList;
+import java.util.Hashtable;
 import java.util.LinkedList;
-import java.util.List;
 import java.util.Random;
 
 public abstract class IntVectorIndividual<P extends Problem, I extends IntVectorIndividual> extends Individual<P, I> {
     protected int[] genome;
-    private Random random;
 
     public IntVectorIndividual(P problem, int size) {
         super(problem);
         genome = new int[size];
-        LinkedList<Integer> visitados = new LinkedList<>();
+        Hashtable<Integer,Integer> visited = new Hashtable<>();
 
         for (int i = 0; i < size; i++) {
             int r = GeneticAlgorithm.random.nextInt(size)+1;
 
-            while (visitados.size() > 0 && visitados.contains(r)) {
+            while (visited.contains(r)) {
                 r=GeneticAlgorithm.random.nextInt(size)+1;
 
             }
-            visitados.add(r);
+            visited.put(r,r);
             genome[i] = r;
         }
 

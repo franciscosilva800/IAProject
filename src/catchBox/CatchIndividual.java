@@ -2,7 +2,6 @@ package catchBox;
 
 import ga.IntVectorIndividual;
 
-import java.util.ArrayList;
 import java.util.LinkedList;
 
 public class CatchIndividual extends IntVectorIndividual<CatchProblemForGA, CatchIndividual> {
