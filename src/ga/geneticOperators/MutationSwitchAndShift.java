@@ -42,7 +42,7 @@ public class MutationSwitchAndShift<I extends IntVectorIndividual, P extends Pro
         for (int i = maxVal; i > minVal + 1; i--) {
             individual.setGene(i, individual.getGene(i-1));
         }
-        
+
 
         individual.setGene(minVal+1, geneAux);
     }
