@@ -20,7 +20,7 @@ public abstract class IntVectorIndividual<P extends Problem, I extends IntVector
         for (int i = 0; i < size; i++) {
             int r = GeneticAlgorithm.random.nextInt(size)+1;
 
-            while (visitados.size() > 0 && visitados.contains(r)) {
+            while (visitados.contains(r)) {
                 r=GeneticAlgorithm.random.nextInt(size)+1;
 
             }
