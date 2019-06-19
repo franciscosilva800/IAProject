@@ -25,8 +25,8 @@ public class MutationSwitchAndShift<I extends IntVectorIndividual, P extends Pro
     * */
     @Override
     public void mutate(I individual) {
-
-        int numGenes = individual.getNumGenes(),random1, random2;
+        int numGenes = individual.getNumGenes();
+        int random1, random2;
 
         do{
             random1 = random.nextInt(numGenes);
@@ -43,8 +43,8 @@ public class MutationSwitchAndShift<I extends IntVectorIndividual, P extends Pro
             individual.setGene(i, individual.getGene(i-1));
         }
 
-
         individual.setGene(minVal+1, geneAux);
+
     }
 
     @Override

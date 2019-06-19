@@ -31,6 +31,7 @@ public class MutationPartialInversion<I extends IntVectorIndividual, P extends P
 
         int numGenes = individual.getNumGenes();
         int  random1,random2,j=0;
+
         I ind2 =(I) individual.clone();
 
         do{

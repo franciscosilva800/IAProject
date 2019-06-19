@@ -2,8 +2,7 @@ package ga;
 
 
 import java.util.Hashtable;
-import java.util.LinkedList;
-import java.util.Random;
+
 
 public abstract class IntVectorIndividual<P extends Problem, I extends IntVectorIndividual> extends Individual<P, I> {
     protected int[] genome;
@@ -12,14 +11,15 @@ public abstract class IntVectorIndividual<P extends Problem, I extends IntVector
         super(problem);
         genome = new int[size];
         Hashtable<Integer,Integer> visited = new Hashtable<>();
+        int r;
 
         for (int i = 0; i < size; i++) {
-            int r = GeneticAlgorithm.random.nextInt(size)+1;
 
-            while (visited.contains(r)) {
+            do{
                 r=GeneticAlgorithm.random.nextInt(size)+1;
 
-            }
+            }while (visited.contains(r));
+
             visited.put(r,r);
             genome[i] = r;
         }
