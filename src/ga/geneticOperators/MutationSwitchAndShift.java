@@ -12,17 +12,6 @@ public class MutationSwitchAndShift<I extends IntVectorIndividual, P extends Pro
     }
 
 
-
-    /*
-    * Vai buscar a posicao de 2 genes.
-    * A posicao com indice menor serve de marcador
-    * O gene na posicao com o indice maior vai ser colocado na posicao a seguir à do indice menor.
-    * faz o shift do resto das posicoes ate à posicao do indice maior.
-    * [1,2,3,4,5,6]
-    * pos1 = 1, pos2 = 4;
-    * val ant:     3   5
-    * final : [1,2,5,3,4,6]
-    * */
     @Override
     public void mutate(I individual) {
         int numGenes = individual.getNumGenes();

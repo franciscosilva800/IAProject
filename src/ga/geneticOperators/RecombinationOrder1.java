@@ -44,6 +44,7 @@ public class RecombinationOrder1<I extends IntVectorIndividual, P extends Proble
         changePositions(ind1,ind2);
 
 
+        visited.clear();
     }
 
     public void createSegment(I ind,int[] child){
