@@ -33,7 +33,6 @@ public class CatchIndividual extends IntVectorIndividual<CatchProblemForGA, Catc
 
 
         //DISTANCIA DA ULTIMA CAIXA A PORTA
-        //So entra no ultimo valor
         fitness += problem.getDistanceBetweenCells(boxes.get(genome[genome.length-1]-1),door);
 
 

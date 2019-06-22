@@ -18,7 +18,7 @@ public class RecombinationCycle<I extends IntVectorIndividual, P extends Problem
     public void recombine(I p1, I p2) {
         int idx = 0, item,aux;
 
-        /*CRIAS OS CICLOS*/
+        /*CRIA OS CICLOS*/
         do{
 
             indexes.add(idx);
